@@ -25,10 +25,10 @@ RUN apt-get update
 RUN apt-get -y install oracle-java7-installer
 
 # Install android sdk
-RUN wget http://dl.google.com/android/android-sdk_r22.6.2-linux.tgz
-RUN tar -xvzf android-sdk_r22.6.2-linux.tgz
+RUN wget http://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
+RUN tar -xvzf android-sdk_r24.4.1-linux.tgz
 RUN mv android-sdk-linux /usr/local/android-sdk
-RUN rm android-sdk_r22.6.2-linux.tgz
+RUN rm android-sdk_r24.4.1-linux.tgz
 
 # Install Android tools
 RUN echo y | /usr/local/android-sdk/tools/android update sdk --filter platform,tool,platform-tool,extra,build-tools-23.0.2 --no-ui -a
