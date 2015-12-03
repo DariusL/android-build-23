@@ -41,5 +41,3 @@ ENV PATH $PATH:$GRADLE_HOME/bin
 
 # Export JAVA_HOME variable
 ENV JAVA_HOME /usr/lib/jvm/java-7-oracle
-
-RUN $ANDROID_HOME/tools/templates/gradle/wrapper/gradlew
