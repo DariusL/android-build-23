@@ -37,6 +37,8 @@ RUN echo y | /usr/local/android-sdk/tools/android update sdk --no-ui --all --fil
 ENV ANDROID_HOME /usr/local/android-sdk
 ENV PATH $PATH:$ANDROID_HOME/tools
 ENV PATH $PATH:$ANDROID_HOME/platform-tools
+
+RUN apt-get install gradle
 ENV PATH $PATH:$GRADLE_HOME/bin
 
 # Export JAVA_HOME variable
