@@ -38,7 +38,7 @@ ENV ANDROID_HOME /usr/local/android-sdk
 ENV PATH $PATH:$ANDROID_HOME/tools
 ENV PATH $PATH:$ANDROID_HOME/platform-tools
 
-RUN apt-get install gradle
+RUN apt-get -y install gradle
 ENV PATH $PATH:$GRADLE_HOME/bin
 
 # Export JAVA_HOME variable
