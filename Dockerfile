@@ -39,7 +39,5 @@ ENV PATH $PATH:$ANDROID_HOME/tools
 ENV PATH $PATH:$ANDROID_HOME/platform-tools
 ENV PATH $PATH:$GRADLE_HOME/bin
 
-RUN gradle -v
-
 # Export JAVA_HOME variable
 ENV JAVA_HOME /usr/lib/jvm/java-7-oracle
