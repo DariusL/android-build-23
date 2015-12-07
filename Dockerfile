@@ -44,7 +44,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-7-oracle
 ENV GRADLE_VERSION 2.7
 
 WORKDIR /usr/bin
-RUN curl -sLO https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-all.zip && \
+RUN wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-all.zip && \
   unzip gradle-${GRADLE_VERSION}-all.zip && \
   ln -s gradle-${GRADLE_VERSION} gradle && \
   rm gradle-${GRADLE_VERSION}-all.zip
