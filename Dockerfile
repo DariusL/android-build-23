@@ -37,7 +37,17 @@ RUN echo y | /usr/local/android-sdk/tools/android update sdk --no-ui --all --fil
 ENV ANDROID_HOME /usr/local/android-sdk
 ENV PATH $PATH:$ANDROID_HOME/tools
 ENV PATH $PATH:$ANDROID_HOME/platform-tools
-ENV PATH $PATH:$GRADLE_HOME/bin
 
 # Export JAVA_HOME variable
 ENV JAVA_HOME /usr/lib/jvm/java-7-oracle
+
+ENV GRADLE_VERSION 2.7
+
+WORKDIR /usr/bin
+RUN curl -sLO https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-all.zip && \
+  unzip gradle-${GRADLE_VERSION}-all.zip && \
+  ln -s gradle-${GRADLE_VERSION} gradle && \
+  rm gradle-${GRADLE_VERSION}-all.zip
+
+ENV GRADLE_HOME /usr/bin/gradle
+ENV PATH $PATH:$GRADLE_HOME/bin
