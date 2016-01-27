@@ -19,7 +19,7 @@ RUN mv android-sdk-linux /usr/local/android-sdk
 RUN rm android-sdk_r24.4.1-linux.tgz
 
 # Install Android tools
-RUN echo y | /usr/local/android-sdk/tools/android update sdk --no-ui --all --filter android-23,platform-tools,build-tools-23.0.2,extra-android-m2repository 
+andrRUN echo y | /usr/local/android-sdk/tools/android update sdk --no-ui --all --filter android-23,platform-tools,build-tools-23.0.2,extra-android-m2repository,extra-google-google_play_services,extra-google-m2repository
 
 # Environment variables
 ENV ANDROID_HOME /usr/local/android-sdk
