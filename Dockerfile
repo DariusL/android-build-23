@@ -9,8 +9,6 @@ RUN apt-get -y install software-properties-common python-software-properties bzi
 
 RUN add-apt-repository ppa:webupd8team/java
 
-RUN apt-get update
-
 RUN apt-get -y install oracle-java7-installer
 
 RUN wget http://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
