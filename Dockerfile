@@ -1,3 +1,8 @@
 FROM android-base
 
-RUN echo y | /usr/local/android-sdk/tools/android update sdk --no-ui --all --filter android-23,platform-tools,build-tools-23.0.2,extra-android-m2repository,extra-google-google_play_services,extra-google-m2repository
+RUN echo y | /usr/local/android-sdk/tools/android update sdk --no-ui --all --filter android-23
+RUN echo y | /usr/local/android-sdk/tools/android update sdk --no-ui --all --filter platform-tools
+RUN echo y | /usr/local/android-sdk/tools/android update sdk --no-ui --all --filter build-tools-23.0.2
+RUN echo y | /usr/local/android-sdk/tools/android update sdk --no-ui --all --filter extra-android-m2repository
+RUN echo y | /usr/local/android-sdk/tools/android update sdk --no-ui --all --filter extra-google-google_play_services
+RUN echo y | /usr/local/android-sdk/tools/android update sdk --no-ui --all --filter extra-google-m2repository
